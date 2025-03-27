@@ -155,3 +155,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   GLightbox({ selector: '.glightbox' });
 });
+
+// whatsapp enquire send
+document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value || "Not provided";
+  const service = document.getElementById("service").value || "Not selected";
+  const message = document.getElementById("message").value;
+
+  const whatsappNumber = "9567503242"; 
+
+  const whatsappMessage = `Hello, I would like to enquire about the following:\n\n` +
+                          `*Full Name:* ${name}\n` +
+                          `*Email:* ${email}\n` +
+                          `*Phone:* ${phone}\n` +
+                          `*Service Interested In:* ${service}\n` +
+                          `*Message:* ${message}`;
+
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
+
+  alert("Your enquiry has been sent! You will be redirected to WhatsApp.");
+
+  document.getElementById("enquiryForm").reset();
+});
