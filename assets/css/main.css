@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #6c63ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +30,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #272828;  /* The default color of the main navmenu links */
-  --nav-hover-color: #5fcf80; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #6c63ff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #5fcf80; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #6c63ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -2256,5 +2256,104 @@ section,
   
   .member-content {
     padding-right: 0;
+  }
+}
+
+/* gallery */
+
+.gallery-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f1f4ff 100%);
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.gallery-category {
+  font-size: 0.9rem;
+  color: #6c63ff;
+  font-weight: 500;
+}
+
+.gallery-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 2px solid #6c63ff;
+  background: transparent;
+  color: #6c63ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #6c63ff;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
