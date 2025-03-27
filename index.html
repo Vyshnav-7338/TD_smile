@@ -460,16 +460,20 @@
                 • Relationship Guidance
               </p>
               <p class="contact">
-                <a href="tel:9567503242" class="contact-link">
-                  <i class="bi bi-telephone"></i>
-                  Schedule Consultation
+                <a href="smileguidanceclt@gmail.com" class="contact-link">
+                  <i class="bi bi-envelope"></i>
+                  Email Us
                 </a>
               </p>
+              
               <div class="social">
-                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <!-- <a href="" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a> -->
+                <a href="https://www.facebook.com/share/14wJUqEs1Ab/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/smile_guidance?igsh=MTljYjE1MWlhdG9nag==" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://youtube.com/@smileguidance?feature=shared" aria-label="YouTube">
+                  <i class="bi bi-youtube"></i>
+                </a>
+                
               </div>
             </div>
           </div>
@@ -520,7 +524,106 @@
     </div>
 
     </section><!-- /Trainers Index Section -->
-
+    <section id="enquiry" class="enquiry-section">
+    
+      <div class="form-decoration decoration-1"></div>
+      <div class="form-decoration decoration-2"></div>
+    
+      <div class="container">
+        <div class="enquiry-container" data-aos="fade-up">
+          <div class="form-header">
+            <h2>Get in Touch</h2>
+            <p>Have questions? We're here to help guide you on your journey</p>
+          </div>
+          
+          <div class="form-body">
+            <form id="enquiryForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="service" class="form-label">Service Interested In</label>
+                    <select class="form-control" id="service" name="service">
+                      <option value="">Select a service</option>
+                      <option value="education">Education Guidance</option>
+                      <option value="career">Career Counseling</option>
+                      <option value="personality">Personality Development</option>
+                      <option value="psychological">Psychological Support</option>
+                      <option value="health">Health Orientation</option>
+                      <option value="social">Social Skills</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" name="message" required></textarea>
+              </div>
+              
+              <div class="form-group" style="text-align: center;">
+                <button type="submit" class="submit-btn">
+                  Send Enquiry <i class="bi bi-send"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const formData = new FormData(this);
+      
+      // Here you would typically send the data to your server
+      // For demo, we'll just show a success message
+      alert('Thank you for your enquiry! We will contact you soon.');
+      this.reset();
+      
+      // Example using fetch API:
+      /*
+      fetch('your-server-endpoint', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Thank you for your enquiry! We will contact you soon.');
+        this.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting your form. Please try again.');
+      });
+      */
+    });
+    </script>
 
   </main>
 
@@ -539,10 +642,13 @@
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
           <div class="social">
-            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <!-- <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a> -->
+            <a href="https://youtube.com/@smileguidance?feature=shared" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/share/14wJUqEs1Ab/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/smile_guidance?igsh=MTljYjE1MWlhdG9nag==" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <!-- <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a> -->
           </div>
         </div>
 
@@ -589,9 +695,8 @@
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://tomercondevelopers.com/">Tomercon Developers</a> Distributed by <a
-          href='https://tomercondevelopers.com/'>Tomercon Developers
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] --> Developed by <a
+          href='https://tomercondevelopers.com/'>Tomercon Developers LLO
       </div>
     </div>
 
