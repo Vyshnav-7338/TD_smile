@@ -166,7 +166,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
   const service = document.getElementById("service").value || "Not selected";
   const message = document.getElementById("message").value;
 
-  const whatsappNumber = "9567503242"; 
+  const whatsappNumber = "+919567503242"; 
 
   const whatsappMessage = `Hello, I would like to enquire about the following:\n\n` +
                           `*Full Name:* ${name}\n` +
